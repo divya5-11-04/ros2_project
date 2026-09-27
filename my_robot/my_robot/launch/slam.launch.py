@@ -1,3 +1,17 @@
+#!/usr/bin/env python3
+"""
+Launch file to run slam_toolbox (async mode) against the simulated
+differential-drive robot in this workspace.
+
+Assumes:
+  - Gazebo is already running with robotworld.sdf
+  - ros_gz_bridge is already bridging /cmd_vel, /odom, /scan
+  - robot publishes odom -> base_link TF (via odometry bridge / robot_state_publisher)
+
+Usage:
+  ros2 launch my_robot slam.launch.py
+"""
+
 import os
 
 from ament_index_python.packages import get_package_share_directory
